@@ -13,7 +13,7 @@ import CardBox from "@/components/core/CardBox";
 
 const ProjectItem = ({ project }: { project: IProjectItem }) => {
   return (
-    <CardBox classNames="min-w-[calc(100%-1rem)] sm:min-w-[calc(100%-2rem)] md:min-w-[25rem] lg:min-w-[28rem] aspect-[3/5] max-h-[28rem] sm:max-h-[30rem] p-3 sm:p-4 gap-6 sm:gap-8 items-center justify-between rounded-[var(--borderRadius)] border border-[rgba(255,255,255,0.10)] dark:bg-[var(--primaryColor5)] bg-[var(--primaryColor5)] shadow-[2px_4px_16px_0px_rgba(100,100,100,0.06)_inset] group slide_in">
+    <CardBox classNames="w-full h-full p-4 sm:p-5 gap-6 sm:gap-8 items-center justify-between rounded-[var(--borderRadius)] border border-[rgba(255,255,255,0.10)] dark:bg-[var(--primaryColor5)] bg-[var(--primaryColor5)] shadow-[2px_4px_16px_0px_rgba(100,100,100,0.06)_inset] group slide_in">
       <Column classNames="w-full items-center justify-start">
         <Row classNames="w-[2rem] sm:w-[2.5rem] md:w-[3rem] aspect-square items-center justify-center">
           <Image

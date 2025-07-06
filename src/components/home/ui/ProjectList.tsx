@@ -16,12 +16,16 @@ const ProjectList = ({ projects }: Readonly<{ projects: IProjectItem[] }>) => {
 
   return (
     <Column classNames="w-full mt-8 sm:mt-12 lg:mt-16">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+      {/* <Row classNames=" gap-3 sm:gap-4 ">
         {projects.slice(0, visibleCount).map((item, index) => (
           <ProjectItem key={`project-item-${index}`} project={item} />
         ))}
-      </div>
-
+      </Row> */}
+      <Row classNames="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        {projects.slice(0, visibleCount).map((item, index) => (
+          <ProjectItem key={`project-item-${index}`} project={item} />
+        ))}
+      </Row>
       {visibleCount < projects.length && (
         <Row classNames="w-full items-center justify-center mt-8 sm:mt-12 lg:mt-16">
           <button
