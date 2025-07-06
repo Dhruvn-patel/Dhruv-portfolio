@@ -3,9 +3,7 @@ import defaultTheme from "tailwindcss/defaultTheme";
 const svgToDataUri = require("mini-svg-data-uri");
 
 const colors = require("tailwindcss/colors");
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -17,7 +15,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        move: "move 5s linear infinite",
+        move: "move 2s linear infinite",
       },
       keyframes: {
         move: {
@@ -58,9 +56,7 @@ module.exports = {
 
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-  );
+  let newVars = Object.fromEntries(Object.entries(allColors).map(([key, val]) => [`--${key}`, val]));
 
   addBase({
     ":root": newVars,

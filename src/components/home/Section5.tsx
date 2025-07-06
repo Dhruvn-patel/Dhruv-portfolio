@@ -11,7 +11,7 @@ const HomeSection5 = ({ id }: { id: string }) => {
       id={id}
     >
       <ConstrainedBox classNames="p-4 sm:p-6 py-12 sm:py-16">
-        <SectionTitle>Recent Works</SectionTitle>
+        <SectionTitle>Works</SectionTitle>
 
         <ProjectList projects={projects} />
       </ConstrainedBox>

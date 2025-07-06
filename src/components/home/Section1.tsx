@@ -26,7 +26,7 @@ const HomeSection1 = ({ id }: Readonly<{ id: string }>) => {
             />
           </div>
           <p className="text-sm/normal sm:text-base/normal mt-4 dark:text-[var(--textColorLight)] text-[var(--textColorLight)]">
-            Full Stack Developer 💻 SDE 🛠️ Open Source 🌍
+            Full Stack Developer 💻 SDE
           </p>
 
           <div className="gap-4 mt-8 sm:mt-12 lg:mt-16 flex flex-col sm:flex-row items-center">
@@ -48,9 +48,7 @@ const HomeSection1 = ({ id }: Readonly<{ id: string }>) => {
                   aria-label={`${link.name}`}
                 >
                   <span className="text-sm sm:text-base/6 text-[var(--whiteColor)]">
-                    {typeof link.icon === "string" ? null : (
-                      <FontAwesomeIcon icon={link.icon} />
-                    )}
+                    {typeof link.icon === "string" ? null : <FontAwesomeIcon icon={link.icon} />}
                   </span>
                 </Link>
               );

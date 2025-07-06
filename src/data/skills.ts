@@ -67,7 +67,7 @@ const skills: ISkillListItem[] = [
     ],
   },
   {
-    title: "Backend Development", 
+    title: "Backend Development",
     items: [
       {
         title: "Node.js",
@@ -112,7 +112,7 @@ const skills: ISkillListItem[] = [
     ],
   },
   {
-    title: "DevOps/VCS",
+    title: "DevOps",
     items: [
       {
         title: "Docker",
@@ -136,21 +136,21 @@ const skills: ISkillListItem[] = [
       },
     ],
   },
-  {
-    title: "Miscellaneous",
-    items: [
-      {
-        title: "Firebase",
-        level: SkillLevel.Intermediate,
-        icon: "/skills/firebase.svg",
-      },
-      {
-        title: "Ubuntu",
-        level: SkillLevel.Intermediate,
-        icon: "/skills/ubuntu.png",
-      },
-    ],
-  },
+  // {
+  //   title: "Miscellaneous",
+  //   items: [
+  //     {
+  //       title: "Firebase",
+  //       level: SkillLevel.Intermediate,
+  //       icon: "/skills/firebase.svg",
+  //     },
+  //     {
+  //       title: "Ubuntu",
+  //       level: SkillLevel.Intermediate,
+  //       icon: "/skills/ubuntu.png",
+  //     },
+  //   ],
+  // },
   // {
   //   title: "Nontechnical Skills",
   //   items: [

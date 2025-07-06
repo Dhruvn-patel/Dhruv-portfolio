@@ -5,15 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/utils/cn";
 import { AnimatedServiceCard } from "../home/ui/AnimatedServiceCard";
 
-export const HoverLayoutGrid = ({
-  cards,
-  className,
-}: {
-  cards: any[];
-  className?: string;
-}) => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
+export const HoverLayoutGrid = ({ cards, className }: { cards: any[]; className?: string }) => {
   return (
     <div
       className={cn(
@@ -22,29 +14,7 @@ export const HoverLayoutGrid = ({
       )}
     >
       {cards.map((item, idx) => (
-        <div
-          key={item?.id}
-          className="relative group block p-2 h-full w-full"
-          onMouseEnter={() => setHoveredIndex(idx)}
-          onMouseLeave={() => setHoveredIndex(null)}
-        >
-          <AnimatePresence>
-            {hoveredIndex === idx && (
-              <motion.span
-                className="absolute inset-0 h-full w-full bg-slate-800/[0.5] dark:bg-slate-800/[0.5] block rounded-[var(--borderRadius)]"
-                layoutId="hoverBackground"
-                initial={{ opacity: 0 }}
-                animate={{
-                  opacity: 1,
-                  transition: { duration: 0.15 },
-                }}
-                exit={{
-                  opacity: 0,
-                  transition: { duration: 0.15, delay: 0.2 },
-                }}
-              />
-            )}
-          </AnimatePresence>
+        <div key={item?.id} className="relative group block p-2 h-full w-full cursor-pointer">
           <AnimatedServiceCard item={item} />
         </div>
       ))}

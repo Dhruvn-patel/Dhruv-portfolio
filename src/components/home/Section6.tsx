@@ -18,22 +18,9 @@ const HomeSection6 = ({ id }: { id: string }) => {
         <Column classNames="mt-8 sm:mt-12 lg:mt-16 w-full">
           <GridBox classNames="grid-cols-1 sm:grid-cols-2 w-full mx-auto gap-3 sm:gap-4">
             {socialLinks.map((link, index) => {
-              return (
-                <SocialButton
-                  key={`social-link-${index}`}
-                  text={link.text}
-                  icon={link.icon}
-                  url={link.url}
-                />
-              );
+              return <SocialButton key={`social-link-${index}`} text={link.text} icon={link.icon} url={link.url} />;
             })}
           </GridBox>
-
-          <p className="text-center mx-auto mt-8 sm:mt-12 lg:mt-16 text-lg sm:text-xl lg:text-2xl/6 font-semibold px-4">
-            I&apos;m{" "}
-            <span className="text-[var(--primaryColor)]">available</span> for
-            freelancing.
-          </p>
         </Column>
       </ConstrainedBox>
     </ResponsiveBox>

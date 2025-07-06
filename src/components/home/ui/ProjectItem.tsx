@@ -38,9 +38,7 @@ const ProjectItem = ({ project }: { project: IProjectItem }) => {
               : "text-[var(--successColor)] border-[var(--successColor50)]"
           }`}
         >
-          <p className="text-xs/6 font-semibold">
-            {project.repoType === RepoType.Private ? "Private" : "Public"}
-          </p>
+          <p className="text-xs/6 font-semibold">{project.repoType === RepoType.Private ? "Private" : "Public"}</p>
         </div>
 
         <Row classNames="w-full items-center justify-center mt-3 sm:mt-4 gap-2">
@@ -51,10 +49,7 @@ const ProjectItem = ({ project }: { project: IProjectItem }) => {
               target="_blank"
               className="app__outlined_btn !rounded-full !p-1.5 sm:!p-2 lg:!p-3 !aspect-square !border-[var(--textColor)]"
             >
-              <FontAwesomeIcon
-                icon={faGithub}
-                className="text-sm sm:text-base/6 text-[var(--textColor)]"
-              />
+              <FontAwesomeIcon icon={faGithub} className="text-sm sm:text-base/6 text-[var(--textColor)]" />
             </Link>
           ) : null}
 
@@ -65,10 +60,7 @@ const ProjectItem = ({ project }: { project: IProjectItem }) => {
               target="_blank"
               className="app__outlined_btn !rounded-full !p-1.5 sm:!p-2 lg:!p-3 !aspect-square !border-[var(--textColor)]"
             >
-              <FontAwesomeIcon
-                icon={faEye}
-                className="text-sm sm:text-base/6 text-[var(--textColor)]"
-              />
+              <FontAwesomeIcon icon={faEye} className="text-sm sm:text-base/6 text-[var(--textColor)]" />
             </Link>
           ) : null}
         </Row>
